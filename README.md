@@ -32,7 +32,7 @@
     `git clone https://github.com/kikkamfybyr/Clatex.git` を実行し、任意のディレクトリ（例：`D:\Clatex`）にプロジェクトを取得します。
 2. **TeX Live 2025 をインストールする**
     インストーラーの詳細設定（Advanced）から `small scheme` を選択し、容量削減のため `Install font/macro doc tree` と `Install font/macro source tree` のチェックを外してインストールを完了させます。
-    ![option](<スクリーンショット 2026-01-31 225928.png>)
+    ![option](<225928.png>)
 3. **不足パッケージとツールを個別に導入する**
     ターミナル（PowerShell等）で以下のコマンドを実行し、ビルドに必須となるツールと依存パッケージを一括で導入します。
 
