@@ -1,6 +1,6 @@
 # LaTeX Project Portal
 
-このプロジェクトは、 $\text{up}\LaTeX$ と $\text{Lua}\LaTeX$ を併用できる自動ビルド環境です。
+このプロジェクトは、Windowsで $\text{up}\LaTeX$ と $\text{Lua}\LaTeX$ を併用できる自動ビルド環境です。
 
 ## 環境
 
