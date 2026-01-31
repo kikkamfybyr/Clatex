@@ -23,8 +23,8 @@ if (defined $target) {
 }
 
 # --- 3. コマンド設定 ---
-$lualatex = 'lualatex -shell-escape -synctex=1 -interaction=nonstopmode -halt-on-error -file-line-error %O %S';
-$latex    = 'uplatex -shell-escape -synctex=1 -interaction=nonstopmode -halt-on-error -file-line-error %O %S';
+$lualatex = 'lualatex -synctex=1 -interaction=nonstopmode -halt-on-error -file-line-error %O %S';
+$latex    = 'uplatex -synctex=1 -interaction=nonstopmode -halt-on-error -file-line-error %O %S';
 $dvipdf   = 'dvipdfmx %O -o %D %S';
 $makeindex = 'mendex -U %O -o %D %S';
 
