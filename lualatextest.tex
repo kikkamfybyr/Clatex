@@ -1,0 +1,29 @@
+% !TEX program = lualatex
+\documentclass[paper=a4, jafontsize=10pt]{jlreq}
+
+% 基本パッケージ
+\usepackage[margin=20truemm]{geometry}
+\usepackage{amsmath, amsthm}
+\usepackage[version=4]{mhchem}
+\usepackage{chemfig}
+
+% LuaLaTeXでは標準でフォントが扱えるためpxchfonは不要（jlreqが良しなにやってくれます）
+
+\title{Lua\LaTeX 動作確認}
+\author{Gemini}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{テスト項目}
+このファイルは \textbf{Lua\LaTeX} でビルドされています。
+
+\subsection{数式と化学式}
+シュレディンガー方程式：
+$$i\hbar \frac{\partial}{\partial t} \Psi(\mathbf{r}, t) = \hat{H} \Psi(\mathbf{r}, t)$$
+
+ベンゼン環のテスト：
+\chemfig{*6(-=-=-=)}
+
+\end{document}

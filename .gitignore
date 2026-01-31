@@ -1,0 +1,28 @@
+# --- LaTeX Output (Your out_dir) ---
+out/
+
+# --- Standard auxiliary files (Root directory fallback) ---
+*.aux
+*.log
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.pdf
+*.dvi
+*.xdv
+
+# --- Package specific ---
+*.listing
+_minted*
+indent.log
+2025/
+texmf-local/
+
+
+# --- VSCode settings ---
+.history/
+
+# --- OS specific ---
+.DS_Store
+Thumbs.db

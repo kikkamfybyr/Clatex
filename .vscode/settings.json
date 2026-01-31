@@ -1,0 +1,95 @@
+{
+    // ===========================================================
+    // 1. ビルド・ツール設定 (Recipe)
+    // ===========================================================
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (automatic)",
+            "tools": ["latexmk"]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-r",
+                "%WORKSPACE_FOLDER%/.latexmkrc",
+                "-silent",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ]
+        }
+    ],
+    // Magic Commentの解釈はlatexmk側に任せる設定
+    "latex-workshop.latex.build.forceRecipeUsage": true,
+
+    // ===========================================================
+    // 2. 基本・プレビュー設定
+    // ===========================================================
+    "latex-workshop.latex.outDir": "%DIR%/out",                 // 出力ディレクトリを./outに設定
+    "latex-workshop.message.log.show": true,                    // ビルドログを表示
+    "latex-workshop.latex.autoBuild.run": "onSave",             // お好みで "never" から変更
+    "latex-workshop.view.pdf.viewer": "tab",                    // PDFビューアをタブに設定
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",  // ダブルクリックでSyncTeX
+    "latex-workshop.synctex.afterBuild.enabled": true,          // ビルド後にSyncTeX有効化
+
+    // 数式・引用のホバープレビュー (mhchemを有効化)
+    "latex-workshop.hover.preview.mathjax.extensions": ["mathtools", "mhchem", "textmacros", "bbox"],
+    "latex-workshop.hover.citation.enabled": true,
+    "latex-workshop.hover.ref.enabled": true,
+
+    // パッケージ説明 (texdoc) 設定
+    "latex-workshop.texdoc.path": "texdoc",
+    "latex-workshop.texdoc.args": ["--view"],
+
+    // ===========================================================
+    // 3. お掃除 & ファイル非表示設定
+    // ===========================================================
+    "latex-workshop.latex.autoClean.run": "onBuilt",            // ビルド成功後に自動クリーン
+    "latex-workshop.latex.clean.method": "glob",                // 強制的にglob方式に設定
+    "latex-workshop.latex.clean.subfolder.enabled": true,       // outフォルダ内もクリーン
+    "latex-workshop.latex.clean.fileTypes": [                   // クリーン対象ファイル
+        "*.aux", "*.bbl", "*.blg", "*.out", "*.toc", "*.lof", "*.lot", "*.log",
+        "*.fdb_latexmk", "*.fls", "*.run.xml", "*.bcf", "*.dvi",
+        "*.idx", "*.ilg", "*.ind", "*.glo", "*.gls", "*.glsdefs", "*.acn", 
+        "*.acr", "*.alg", "*.loa", "*.thm", "*.mw", "*.listing", "out/_minted",
+        "*.xdv", "*.upa", "*.upa(busy)", 
+        "*.synctex(busy)", "*.synctex.gz(busy)", "*.bbl-SAVE-ERROR",
+        "*.pdfpc", "*.pdfpcnotes"
+    ],
+
+    "files.exclude": {                                // ファイルエクスプローラーで非表示にするファイル
+        "**/*.aux": true, "**/*.fls": true, "**/*.fdb_latexmk": true, 
+        "**/*.synctex.gz": true, "**/*.bbl": true, "**/*.blg": true, 
+        "**/*.bcf": true, "**/*.run.xml": true, "**/*.upa": true, 
+        "**/*.dvi": true, "**/*.listing": true, "out/_minted": true,
+        "**/indent.log": true
+    },
+
+    // ===========================================================
+    // 4. 入力補完・エディタ挙動
+    // ===========================================================
+    "latex-workshop.intellisense.package.enabled": true,        // パッケージ名補完
+    "latex-workshop.intellisense.argumentHint.enabled": true,   // コマンド引数ヒント
+    "latex-workshop.intellisense.atSuggestion.trigger.latex": "@",  // @で補完をトリガー
+    "editor.snippetSuggestions": "inline",                      // スニペットを他の候補と混在表示
+    // 日本語文章中での単語区切り文字設定
+    "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?．。，、（）「」［］｛｝《》【】『』！？てにをはがのともへでや",
+    "editor.suggest.snippetsPreventQuickSuggestions": false,    // スニペットとクイックサジェストを共存
+    "editor.quickSuggestions": {"other": "on", "comments": "off", "strings": "off"},    // クイックサジェスト設定
+    "editor.suggestSelection": "first",                         // 補完候補リストの最初を選択
+    "editor.tabCompletion": "on",                               // Tabで補完を受け入れ
+    "editor.suggest.insertMode": "insert",                      // 補完の挿入モード設定
+    "editor.renderWhitespace": "selection",                     // 選択範囲内でのみ空白文字を表示
+
+    "latex-workshop.message.latexlog.exclude": [                // LaTeXログの警告非表示設定
+        "(Font shape `(JY1|JT1|JY2|JT2)(/.*)(sl|it|sc)'.*|Some font shapes were not available.*)"
+    ],
+
+    "[latex]": {
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.tabSize": 2,
+        "editor.formatOnSave": false
+    }
+}

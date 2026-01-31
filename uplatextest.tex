@@ -1,0 +1,30 @@
+% !TEX program = uplatex
+\documentclass[uplatex, paper=a4, jafontsize=10pt]{jlreq}
+
+% 基本パッケージ
+\usepackage[margin=20truemm]{geometry}
+\usepackage{amsmath, amsthm}
+\usepackage[version=4]{mhchem}
+\usepackage{chemfig}
+
+% フォント設定 (uplatex用)
+\usepackage[haranoaji, jis2004]{pxchfon}
+
+\title{up\LaTeX 動作確認}
+\author{Gemini}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{テスト項目}
+このファイルは \textbf{up\LaTeX} でビルドされています。
+
+\subsection{数式と化学式}
+アレーニウスの式は以下のように記述されます：
+$$k = A \exp\left( -\frac{E_a}{RT} \right)$$
+
+水の構造式（\ce{H2O}）：
+\chemfig{H-[:30]O-[:-30]H}
+
+\end{document}
