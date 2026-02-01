@@ -29,7 +29,7 @@
     // ===========================================================
     "latex-workshop.latex.outDir": "%DIR%/out",                 // 出力ディレクトリを./outに設定
     "latex-workshop.message.log.show": true,                    // ビルドログを表示
-    "latex-workshop.latex.autoBuild.run": "onSave",             // お好みで "never" から変更
+    "latex-workshop.latex.autoBuild.run": "onSave",             // 保存時に自動ビルド
     "latex-workshop.view.pdf.viewer": "tab",                    // PDFビューアをタブに設定
     "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",  // ダブルクリックでSyncTeX
     "latex-workshop.synctex.afterBuild.enabled": true,          // ビルド後にSyncTeX有効化
